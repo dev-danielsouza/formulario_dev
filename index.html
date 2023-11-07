@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" name="estilo" href="style.css" />
+  <title>Formulário DEV</title>
+</head>
+<body>
+    <div> <!--Cabeçalho-->
+        <h1 id="titulo">FORMULÁRIO DEV</h1>
+        <h3 id="subtitulo">Preencha o Formulário abaixo:</h3>
+    </div>
+    <form>
+        <fieldset class="grupo"> <!--Fieldset de NOME e EMAIL-->
+                <div class="campo">
+                    <label class="label-nome" for="nome"><strong>Nome</strong></label>
+                    <input
+                    type="text"
+                    name="nome"
+                    id="nome"
+                    placeholder="Digite seu nome"
+                    required
+                    />
+                </div>
+                <div class="campo">
+                    <label class="label-email" for="email"><strong>Email</strong></label>
+                    <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Digite seu email"
+                    required
+                    />
+                </div>
+        </fieldset>
+        <div class="campo"> <!--Campo de Idade-->
+            <label class="label-idade" for="idade"><strong>Idade</strong></label>
+            <input
+            type="number"
+            name="idade"
+            id="idade"
+            min="10"
+            max="99"
+            placeholder="idade"
+            />
+        </div>
+        <div class="campo"> <!--Campo Função-->
+            <p class="titulo-select">
+              <strong>Qual opção melhor descreve sua função atual?</strong>
+            </p>
+            <select>
+                  <option disable selected value="">Selecione sua função</option>
+                  <option value="estudante">Estudante</option>
+                  <option value="empregado">Empregado</option>
+                  <option value="desempregado">Desempregado</option>
+                  <option value="trabalhoN">Buscando um trabalho</option>
+                  <option value="prefiroN">Prefiro não falar</option>
+            </select>
+        </div>
+        <fieldset class="grupo">
+                <div class="campo"> <!--Campo Senerioridade-->
+                  <p class="titulo-radio">
+                    <strong>Selecione sua Seneoridade:</strong>
+                  </p>
+                  <label>
+                    <input
+                    type="radio"
+                    name="seneoridade"
+                    value="junior"
+                    checked
+                    />Junior
+                  </label>
+                  <label>
+                    <input
+                    type="radio"
+                    name="seneoridade"
+                    value="senior"
+                    />Sênior
+                  </label>
+                  <label>
+                    <input
+                    type="radio"
+                    name="seneoridade"
+                    value="pleno"
+                    />Plêno
+                  </label>
+                  <label>
+                    <input
+                    type="radio"
+                    name="seneoridade"
+                    value="estudando"
+                    />Ainda estou estudando
+                  </label>
+              </div>
+        </fieldset>
+        <fieldset class="grupo">
+                <div id="check"> <!--Campo Área da Progamação-->
+                  <p class="titulo-check">
+                    <strong>Qual área da progamação lhe interessa? (Pode escolher mais de uma alternativa)</strong>
+                  </p>
+                  <label>
+                    <input
+                    type="checkbox"
+                    name="areas"
+                    value="front-end"
+                    />Front-End
+                  </label>
+                  <label>
+                    <input
+                    type="checkbox"
+                    name="areas"
+                    value="back-end"
+                    />Back-End
+                  </label>
+                  <label>
+                    <input
+                    type="checkbox"
+                    name="areas"
+                    value="fullstack"
+                    />Fullstack
+                  </label>
+                  <label>
+                    <input
+                    type="checkbox"
+                    name="areas"
+                    value="mobile-kotlin"
+                    />Mobile (Kotlin)
+                  </label>
+                  <label>
+                    <input
+                    type="checkbox"
+                    name="areas"
+                    value="mobile-swift"
+                    />Mobile (Swift)
+                  </label>
+                  <label>
+                    <input
+                    type="checkbox"
+                    name="areas"
+                    value="dev-jogos"
+                    />Desenvolvedor de Jogos
+                  </label>
+              </div>
+        </fieldset>
+        <div class="campo"> <!--Campo Comentário-->
+            <p class="textarea">
+              <strong>Algum comentário ou sugestão?</strong>
+            </p>
+            <label>
+              <textarea
+              row="6"
+              style="width: 30em; height: 8em;"
+              id="comentarios"
+              name="comentarios"
+              placeholder="Digite seu comentário aqui"
+              ></textarea>
+            </label>
+        </div>
+        <div class="campo"> <!--Campo Button-->
+          <button class="botao" type="submit">Enviar</button>
+        </div>
+        <div class="campo">
+          <button class="botao-2" type="reset">Cancelar</button>
+        </div>
+    </form>
+</body>
+</html>
